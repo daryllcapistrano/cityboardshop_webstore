@@ -26,7 +26,7 @@ export default class Navar extends Component {
 				<Link to="/cart" className="ml-auto">
 					<ButtonContainer>
 						<span className="mr-2">
-							<i class="material-icons">shopping_cart</i>
+							<i className="material-icons">shopping_cart</i>
 						</span>
 						my cart
 					</ButtonContainer>

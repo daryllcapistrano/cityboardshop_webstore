@@ -26,7 +26,7 @@ export default class Product extends Component {
 									in cart
 								</p>
 							) : (
-								<i class="material-icons">add_shopping_cart</i>
+								<i className="material-icons">add_shopping_cart</i>
 							)}
 						</button>
 					</div>
