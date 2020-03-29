@@ -8,7 +8,6 @@ class BurgerMenu extends React.Component {
 	}
 
 	render() {
-		// NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
 		return (
 			<Menu>
 				<a id="home" className="menu-item" href="/">
@@ -20,7 +19,7 @@ class BurgerMenu extends React.Component {
 				<a id="contact" className="menu-item" href="/contact">
 					Contact
 				</a>
-				<a onClick={this.showSettings} className="menu-item--small" href="">
+				<a onClick={this.showSettings} className="menu-item--small" href="/">
 					Settings
 				</a>
 			</Menu>
