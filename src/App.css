@@ -2,14 +2,14 @@
 	--mainBlue: #2a2a72;
 	--lightBlue: #009ffd;
 	--mainWhite: #f3f3f3;
-	--mainDark: #232528;
-	--mainYellow: #ffa400;
+	--mainDark: #151515;
+	--mainYellow: #ffdd03;
 }
 
 body {
 	font-family: 'Libre Baskerville', serif !important;
-	background: var(--mainwhite) !important;
-	color: var(--mainDark) !important;
+	background: var(--mainDark) !important;
+	color: var(--mainYellow) !important;
 }
 
 .text-title {
@@ -19,11 +19,11 @@ body {
 }
 
 .text-blue {
-	color: var(--mainBlue);
+	color: var(--mainYellow);
 }
 
 .text-bright {
-	color: var(--lightBlue);
+	color: var(--mainYellow);
 }
 
 .btn-black {
