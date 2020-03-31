@@ -9,7 +9,6 @@ import Cart from './components/Cart';
 import Default from './components/Default';
 import Modal from './components/Modal';
 import BurgerMenu from './components/Menu/BurgerMenu';
-import ColumnLogo from './column-logo.svg';
 
 class App extends Component {
 	render() {

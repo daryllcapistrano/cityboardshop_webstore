@@ -8,7 +8,7 @@
 
 body {
 	font-family: 'Libre Baskerville', serif !important;
-	background: var(--mainDark) !important;
+	background: var(--mainWhite) !important;
 	color: var(--mainYellow) !important;
 }
 
