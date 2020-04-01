@@ -85,7 +85,7 @@ const ProductWrapper = styled.div`
 		overflow: hidden;
 	}
 	.card-img-top {
-		transition: all 0.5s linear;
+		transition: all 0.3s linear;
 	}
 	.img-container:hover .card-img-top {
 		transform: scale(1.1);
@@ -95,19 +95,19 @@ const ProductWrapper = styled.div`
 		bottom: 0;
 		right: 0;
 		padding: 0.2rem 0.4rem;
-		background: var(--lightBlue);
+		background: var(--mainWhite);
 		border: none;
-		color: var(--mainWhite);
+		color: var(--mainDark);
 		font-size: 1.4rem;
-		border-radius: 0.5rem 0 0 0;
+		border-radius: 0 0 0 0;
 		transform: translate(100%, 100%);
 	}
 	.img-container:hover .cart-btn {
 		transform: translate(0, 0);
-		transition: all 0.5s linear;
+		transition: all 0.3s linear;
 	}
 	.cart-btn:hover {
-		color: var(--mainBlue);
+		color: var(--mainDark);
 		cursor: pointer;
 	}
 `;

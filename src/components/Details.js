@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { ProductConsumer } from '../context';
 import { Link } from 'react-router-dom';
 import { ButtonContainer } from './Button';
@@ -12,52 +11,43 @@ export default class Details extends Component {
 					const { id, company, img, info, price, title, inCart } = value.detailProduct;
 					return (
 						<div className="container py-5">
-							{/* title */}
+							{/* product info */}
 							<div className="row">
-								<div className="col-10 mx-auto text-center text-slanted text-blue my-5">
-									<h1>{title}</h1>
+								<div className="col-10 mx-auto col-md-6 my-3">
+									<img src={img} className="img-fluid d-block mx-auto" alt="product" />
+								</div>
+								{/* product text */}
+								<div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+									<h2>{title}</h2>
+									<h4 className="text-title text-uppercase text-muted mt-3 mb-3">
+										<span className="text-uppercase">{company}</span>
+									</h4>
+									<h4 className="text-blue">
+										<strong>
+											price : <span>$</span>
+											{price}
+										</strong>
+									</h4>
+									<p className="text-capitalize font-weight-bold mt-3 mb-2">some info about the product:</p>
+									<p className="text-muted ">{info}</p>
+									{/*  buttons */}
+									<div>
+										<Link to="/">
+											<ButtonContainer>back to products</ButtonContainer>
+										</Link>
+										<ButtonContainer
+											cart
+											disabled={inCart ? true : false}
+											onClick={() => {
+												value.addToCart(id);
+												value.openModal(id);
+											}}
+										>
+											{inCart ? 'inCart' : 'add to cart'}
+										</ButtonContainer>
+									</div>
 								</div>
 							</div>
-							{/* end title */}
-							<ProductWrapper>
-								{/* product info */}
-								<div className="row">
-									<div className="col-10 mx-auto col-md-6 my-3">
-										<img src={img} className="img-fluid d-block mx-auto card-img-top" alt="product" />
-									</div>
-									{/* product text */}
-									<div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-										<h2>model : {title}</h2>
-										<h4 className="text-title text-uppercase text-muted mt-3 mb-3">
-											made by : <span className="text-uppercase">{company}</span>
-										</h4>
-										<h4 className="text-blue">
-											<strong>
-												price : <span>$</span>
-												{price}
-											</strong>
-										</h4>
-										<p className="text-capitalize font-weight-bold mt-3 mb-2">some info about the product:</p>
-										<p className="text-muted lead">{info}</p>
-										{/*  buttons */}
-										<div>
-											<Link to="/">
-												<ButtonContainer>back to products</ButtonContainer>
-											</Link>
-											<ButtonContainer
-												cart
-												disabled={inCart ? true : false}
-												onClick={() => {
-													value.addToCart(id);
-													value.openModal(id);
-												}}
-											>
-												{inCart ? 'inCart' : 'add to cart'}
-											</ButtonContainer>
-										</div>
-									</div>
-								</div>
-							</ProductWrapper>
 						</div>
 					);
 				}}
@@ -65,54 +55,3 @@ export default class Details extends Component {
 		);
 	}
 }
-
-const ProductWrapper = styled.div`
-	.card {
-		border-color: transparent;
-		transition: all 1s linear;
-	}
-	.card-footer {
-		background: transparent;
-		border-top: transparent;
-		transition: all 1s linear;
-	}
-	&:hover {
-		.card {
-			border: 0.04rem solid rgba(0, 0, 0, 0.2);
-			box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-		}
-		.card-footer {
-			background: rgba(247, 247, 247);
-		}
-	}
-	.img-container {
-		position: relative;
-		overflow: hidden;
-	}
-	.card-img-top {
-		transition: all 0.5s linear;
-	}
-	.img-container:hover .card-img-top {
-		transform: scale(1.1);
-	}
-	.cart-btn {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		padding: 0.2rem 0.4rem;
-		background: var(--lightBlue);
-		border: none;
-		color: var(--mainWhite);
-		font-size: 1.4rem;
-		border-radius: 0.5rem 0 0 0;
-		transform: translate(100%, 100%);
-	}
-	.img-container:hover .cart-btn {
-		transform: translate(0, 0);
-		transition: all 0.5s linear;
-	}
-	.cart-btn:hover {
-		color: var(--mainBlue);
-		cursor: pointer;
-	}
-`;

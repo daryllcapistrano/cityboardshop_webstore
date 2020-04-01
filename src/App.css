@@ -43,5 +43,5 @@ body {
 .cart-icon {
 	cursor: pointer;
 	font-size: 1.2rem;
-	color: var(--mainYellow);
+	color: var(--mainDark);
 }
