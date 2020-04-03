@@ -9,12 +9,12 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-	background: var(--mainYellow);
+	background: var(--mainDark);
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-	background: var(--mainWhite);
+	background: var(--mainDark);
 }
 
 /* Position and sizing of clickable cross button */
@@ -25,7 +25,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-	background: var(--mainYellow);
+	background: var(--mainWhite);
 }
 
 /*

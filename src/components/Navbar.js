@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 // import logo from '../column-logo.svg';
 import styled from 'styled-components';
-// import { ButtonContainer } from './Button';
+import { ButtonContainer } from './Button';
 
 export default class Header extends Component {
 	render() {
@@ -18,14 +18,14 @@ export default class Header extends Component {
 						</Link>
 					</h1>
 				</span>
-				{/* <Link to="/cart" className="ml-auto">
+				<Link to="/cart" className="ml-auto">
 					<ButtonContainer>
 						<span className="mr-2">
-							<i className="material-icons">shopping_cart</i>
+							<i className="material-icons">storefront</i>
 						</span>
 						my cart
 					</ButtonContainer>
-				</Link> */}
+				</Link>
 			</NavWrapper>
 		);
 	}
@@ -34,7 +34,7 @@ export default class Header extends Component {
 const NavWrapper = styled.nav`
 	background: var(--mainWhite);
 	.nav-link {
-		color: var(--mainYellow) !important;
+		color: var(--mainDark) !important;
 		text-transform: capitalize;
 	}
 `;

@@ -8,15 +8,15 @@ import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
 import Modal from './components/Modal';
-import BurgerMenu from './components/Menu/BurgerMenu';
+import Menu from './components/Menu/BurgerMenu';
 
 class App extends Component {
 	render() {
 		return (
-			<React.Fragment>
-				<div id="outer-container">
-					<BurgerMenu pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-					<main id="page-wrap">
+			<div id="outer-container">
+				<Menu />
+				<main id="page-wrap">
+					<React.Fragment>
 						<Navbar />
 						<Switch>
 							<Route exact path="/" component={ProductList} />
@@ -25,9 +25,9 @@ class App extends Component {
 							<Route component={Default} />
 						</Switch>
 						<Modal />
-					</main>
-				</div>
-			</React.Fragment>
+					</React.Fragment>
+				</main>
+			</div>
 		);
 	}
 }

@@ -9,7 +9,7 @@
 body {
 	font-family: 'Libre Baskerville', serif !important;
 	background: var(--mainWhite) !important;
-	color: var(--mainYellow) !important;
+	color: var(--mainDark) !important;
 }
 
 .text-title {
